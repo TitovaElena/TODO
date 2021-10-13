@@ -1,6 +1,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'java'
+    id "org.flywaydb.flyway" version "8.0.1"
 }
 
 repositories {
@@ -13,8 +14,17 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web:2.5.4'
 
+    implementation 'org.flywaydb:flyway-core:7.14.1'
+    runtimeOnly 'org.postgresql:postgresql:42.2.24'
+
     implementation("io.springfox:springfox-boot-starter:3.0.0")
 
     annotationProcessor "org.projectlombok:lombok:1.18.20"
     compileOnly 'org.projectlombok:lombok:1.18.20'
+}
+
+flyway {
+    url = 'jdbc:postgresql://127.0.0.1:5432/todo'
+    user = 'postgres'
+    password = 'postgres'
 }
