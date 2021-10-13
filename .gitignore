@@ -1,6 +1,9 @@
-*
-!*/
-.idea
-!*ToDoProject.java
-!build.gradle
-!.gitignore
+/.gitattributes
+/gradlew
+/gradlew.bat
+/settings.gradle
+/.idea/
+/.gradle/
+/gradle/
+/ToDoProject/.idea/
+/ToDoProject/build/
