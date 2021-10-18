@@ -13,15 +13,15 @@ public class TaskEditDto {
     
     private final Date deadline;
 
-    private final String text;
+    private final String content;
 
     public TaskEditDto(@JsonProperty("category") String category,
                        @JsonProperty("priority") String priority,
                        @JsonProperty("deadline") Date deadline,
-                       @JsonProperty("text") String text) {
+                       @JsonProperty("content") String content) {
         this.category = category;
         this.priority = priority;
         this.deadline = deadline;
-        this.text = text;
+        this.content = content;
     }
 }

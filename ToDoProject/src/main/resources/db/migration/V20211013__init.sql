@@ -13,7 +13,8 @@ create table task.task
     category      varchar     not null,
     priority      varchar     not null,
     deadline      timestamptz not null ,
-    text          varchar     not null,
+    content       varchar     not null,
+    updated_at timestamptz    not null,
     creator_id    int         not null
         references task.user (id)
 );
